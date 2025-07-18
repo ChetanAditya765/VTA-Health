@@ -1,131 +1,219 @@
-
-"""
-Main training script for multimodal mental health detection.
-"""
-
 import os
-import sys
-import argparse
-import logging
+import numpy as np
+import pandas as pd
 import torch
 import torch.nn as nn
 import torch.optim as optim
-from torch.utils.data import DataLoader
-import numpy as np
-import pandas as pd
-from typing import Dict, List, Tuple
-import yaml
-from tqdm import tqdm
-import matplotlib.pyplot as plt
-import seaborn as sns
-from sklearn.metrics import classification_report, confusion_matrix
+from torch.utils.data import Dataset, DataLoader
+from sklearn.model_selection import train_test_split
+from sklearn.metrics import accuracy_score, classification_report, confusion_matrix
+from transformers import AutoTokenizer, AutoModel
+import logging
+from typing import Dict, List, Tuple, Optional
+import warnings
+warnings.filterwarnings('ignore')
 
-# Add src to path
-sys.path.append(os.path.join(os.path.dirname(__file__), '..'))
+# Import our custom modules
+from audio_preprocessing import AudioPreprocessor, process_audio_data
 
-from utils.config import Config
-from utils.data_utils import create_synthetic_data, split_data, encode_labels
-from utils.model_utils import EarlyStopping, calculate_metrics, plot_training_history, save_model, set_seed
-from data_processing.text_preprocessing import process_text_data
-from data_processing.audio_preprocessing import process_audio_data
-from models.text_model import create_text_model
-from models.audio_model import create_audio_model
-from models.multimodal_model import create_multimodal_model
+# Set up logging
+logging.basicConfig(level=logging.INFO)
+logger = logging.getLogger(__name__)
 
-class MultimodalTrainer:
-    """Main trainer for multimodal mental health detection."""
+class TextPreprocessor:
+    """Text preprocessing for mental health detection"""
 
-    def __init__(self, config_path: str = "config.yaml"):
-        """
-        Initialize trainer.
+    def __init__(self, model_name: str = "distilbert-base-uncased"):
+        self.tokenizer = AutoTokenizer.from_pretrained(model_name)
+        self.model_name = model_name
+        self.max_length = 512
 
-        Args:
-            config_path: Path to configuration file
-        """
-        self.config = Config(config_path)
-        self.device = torch.device(self.config.get('training.device', 'cuda' if torch.cuda.is_available() else 'cpu'))
-
-        # Set random seed
-        set_seed(self.config.get('training.seed', 42))
-
-        # Setup logging
-        logging.basicConfig(
-            level=getattr(logging, self.config.get('logging.level', 'INFO')),
-            format=self.config.get('logging.format', '%(asctime)s - %(name)s - %(levelname)s - %(message)s')
+    def preprocess_batch(self, texts: List[str]) -> Dict[str, torch.Tensor]:
+        """Preprocess a batch of texts"""
+        encoded = self.tokenizer(
+            texts,
+            truncation=True,
+            padding=True,
+            max_length=self.max_length,
+            return_tensors='pt'
         )
-        self.logger = logging.getLogger(__name__)
+        return encoded
 
-        # Initialize models
-        self.text_model = None
-        self.audio_model = None
-        self.multimodal_model = None
+class TextModel(nn.Module):
+    """Text model for mental health detection"""
 
-        # Training history
-        self.history = {
-            'train_loss': [],
-            'train_acc': [],
-            'val_loss': [],
-            'val_acc': [],
-            'train_f1': [],
-            'val_f1': []
+    def __init__(self, model_name: str = "distilbert-base-uncased", num_classes: int = 3):
+        super(TextModel, self).__init__()
+        self.bert = AutoModel.from_pretrained(model_name)
+        self.dropout = nn.Dropout(0.1)
+        self.classifier = nn.Linear(self.bert.config.hidden_size, num_classes)
+
+    def forward(self, input_ids, attention_mask):
+        outputs = self.bert(input_ids=input_ids, attention_mask=attention_mask)
+        pooled_output = outputs.last_hidden_state[:, 0]
+        pooled_output = self.dropout(pooled_output)
+        logits = self.classifier(pooled_output)
+        return logits
+
+class AudioModel(nn.Module):
+    """Audio model for mental health detection"""
+
+    def __init__(self, mfcc_dim: int = 13, mel_dim: int = 128, 
+                 prosodic_dim: int = 16, num_classes: int = 3):
+        super(AudioModel, self).__init__()
+
+        # MFCC processing
+        self.mfcc_conv = nn.Sequential(
+            nn.Conv1d(mfcc_dim, 64, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.Conv1d(64, 128, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.AdaptiveAvgPool1d(1)
+        )
+
+        # Mel-spectrogram processing
+        self.mel_conv = nn.Sequential(
+            nn.Conv1d(mel_dim, 64, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.Conv1d(64, 128, kernel_size=3, padding=1),
+            nn.ReLU(),
+            nn.AdaptiveAvgPool1d(1)
+        )
+
+        # Prosodic features processing
+        self.prosodic_fc = nn.Sequential(
+            nn.Linear(prosodic_dim, 64),
+            nn.ReLU(),
+            nn.Linear(64, 128)
+        )
+
+        # Fusion and classification
+        self.fusion_fc = nn.Sequential(
+            nn.Linear(128 + 128 + 128, 256),
+            nn.ReLU(),
+            nn.Dropout(0.3),
+            nn.Linear(256, num_classes)
+        )
+
+    def forward(self, mfcc, mel_spec, prosodic):
+        # Process MFCC
+        mfcc_out = self.mfcc_conv(mfcc.transpose(1, 2)).squeeze(-1)
+
+        # Process Mel-spectrogram
+        mel_out = self.mel_conv(mel_spec.transpose(1, 2)).squeeze(-1)
+
+        # Process prosodic features
+        prosodic_out = self.prosodic_fc(prosodic)
+
+        # Fuse features
+        fused = torch.cat([mfcc_out, mel_out, prosodic_out], dim=1)
+        logits = self.fusion_fc(fused)
+
+        return logits
+
+class MultimodalModel(nn.Module):
+    """Multimodal model combining text and audio"""
+
+    def __init__(self, text_model: TextModel, audio_model: AudioModel, 
+                 num_classes: int = 3, fusion_type: str = "late"):
+        super(MultimodalModel, self).__init__()
+        self.text_model = text_model
+        self.audio_model = audio_model
+        self.fusion_type = fusion_type
+
+        if fusion_type == "late":
+            self.fusion_fc = nn.Linear(num_classes * 2, num_classes)
+        elif fusion_type == "early":
+            # For early fusion, we'd need to modify the architecture
+            self.fusion_fc = nn.Linear(768 + 256, num_classes)  # BERT hidden + audio features
+
+    def forward(self, text_input, audio_input):
+        if self.fusion_type == "late":
+            text_logits = self.text_model(**text_input)
+            audio_logits = self.audio_model(*audio_input)
+
+            # Late fusion
+            combined_logits = torch.cat([text_logits, audio_logits], dim=1)
+            final_logits = self.fusion_fc(combined_logits)
+
+            return final_logits
+        else:
+            # Early fusion would require different implementation
+            pass
+
+class MultimodalDataset(Dataset):
+    """Dataset for multimodal mental health detection"""
+
+    def __init__(self, df: pd.DataFrame, text_preprocessor: TextPreprocessor, 
+                 audio_preprocessor: AudioPreprocessor):
+        self.df = df
+        self.text_preprocessor = text_preprocessor
+        self.audio_preprocessor = audio_preprocessor
+
+        # Preprocess all data
+        self.texts = df['text'].tolist()
+        self.labels = df['label'].tolist()
+
+        # Process audio data
+        self.mfcc_data, self.mel_data, self.prosodic_data = process_audio_data(df)
+
+    def __len__(self):
+        return len(self.df)
+
+    def __getitem__(self, idx):
+        text = self.texts[idx]
+        label = self.labels[idx]
+
+        # Get audio features
+        mfcc = torch.FloatTensor(self.mfcc_data[idx])
+        mel_spec = torch.FloatTensor(self.mel_data[idx])
+        prosodic = torch.FloatTensor(self.prosodic_data[idx])
+
+        return {
+            'text': text,
+            'mfcc': mfcc,
+            'mel_spec': mel_spec,
+            'prosodic': prosodic,
+            'label': torch.LongTensor([label])
         }
 
-        self.logger.info(f"Initialized MultimodalTrainer with device: {self.device}")
+def collate_fn(batch):
+    """Custom collate function for DataLoader"""
+    texts = [item['text'] for item in batch]
+    mfcc = torch.stack([item['mfcc'] for item in batch])
+    mel_spec = torch.stack([item['mel_spec'] for item in batch])
+    prosodic = torch.stack([item['prosodic'] for item in batch])
+    labels = torch.cat([item['label'] for item in batch])
 
-    def load_data(self) -> Tuple[pd.DataFrame, pd.DataFrame, pd.DataFrame]:
-        """
-        Load and prepare data.
+    return {
+        'texts': texts,
+        'mfcc': mfcc,
+        'mel_spec': mel_spec,
+        'prosodic': prosodic,
+        'labels': labels
+    }
 
-        Returns:
-            Tuple of (text_df, audio_df, labels_df)
-        """
-        # Check if real data exists
-        daic_path = self.config.get('data.daic_woz.labels_path', '')
+class MentalHealthTrainer:
+    """Trainer for multimodal mental health detection"""
 
-        if os.path.exists(daic_path):
-            self.logger.info("Loading DAIC-WOZ dataset...")
-            # Load real data (implementation depends on actual data format)
-            # For now, create synthetic data
-            text_df, audio_df, labels_df = create_synthetic_data(1000)
-        else:
-            self.logger.info("Creating synthetic data for demonstration...")
-            text_df, audio_df, labels_df = create_synthetic_data(1000)
+    def __init__(self, config: Dict):
+        self.config = config
+        self.device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
 
-        # Merge dataframes
-        data_df = text_df.merge(audio_df, on='participant_id').merge(labels_df, on='participant_id')
-
-        # Split data
-        train_df, val_df, test_df = split_data(
-            data_df,
-            test_size=self.config.get('training.test_split', 0.1),
-            val_size=self.config.get('training.validation_split', 0.2),
-            stratify_col='label',
-            random_state=self.config.get('training.seed', 42)
+        # Initialize preprocessors
+        self.text_preprocessor = TextPreprocessor(config.get('text_model', 'distilbert-base-uncased'))
+        self.audio_preprocessor = AudioPreprocessor(
+            sample_rate=config.get('sample_rate', 16000),
+            frame_duration=config.get('frame_duration', 30)
         )
 
-        self.logger.info(f"Data split - Train: {len(train_df)}, Val: {len(val_df)}, Test: {len(test_df)}")
-
-        return train_df, val_df, test_df
-
-    def create_models(self):
-        """Create individual and multimodal models."""
-        # Text model
-        text_config = self.config.get('models.text', {})
-        text_config['num_classes'] = 3
-        self.text_model = create_text_model(text_config)
-
-        # Audio model
-        audio_config = self.config.get('models.audio', {})
-        audio_config['num_classes'] = 3
-        self.audio_model = create_audio_model(audio_config)
-
-        # Multimodal model
-        multimodal_config = self.config.get('models.multimodal', {})
-        multimodal_config['num_classes'] = 3
-        self.multimodal_model = create_multimodal_model(
+        # Initialize models
+        self.text_model = TextModel(config.get('text_model', 'distilbert-base-uncased'))
+        self.audio_model = AudioModel()
+        self.multimodal_model = MultimodalModel(
             self.text_model, 
             self.audio_model, 
-            multimodal_config
+            fusion_type=config.get('fusion_type', 'late')
         )
 
         # Move models to device
@@ -133,484 +221,301 @@ class MultimodalTrainer:
         self.audio_model.to(self.device)
         self.multimodal_model.to(self.device)
 
-        self.logger.info("Created all models")
+        # Initialize optimizers
+        self.text_optimizer = optim.Adam(self.text_model.parameters(), lr=config.get('learning_rate', 1e-4))
+        self.audio_optimizer = optim.Adam(self.audio_model.parameters(), lr=config.get('learning_rate', 1e-4))
+        self.multimodal_optimizer = optim.Adam(self.multimodal_model.parameters(), lr=config.get('learning_rate', 1e-4))
 
-    def train_individual_models(self, train_df: pd.DataFrame, val_df: pd.DataFrame):
-        """
-        Train individual text and audio models.
+        # Loss function
+        self.criterion = nn.CrossEntropyLoss()
 
-        Args:
-            train_df: Training data
-            val_df: Validation data
-        """
-        self.logger.info("Training individual models...")
+        logger.info(f"MentalHealthTrainer initialized with device: {self.device}")
 
-        # Prepare text data
-        text_train_encoded, text_train_features = process_text_data(
-            train_df, 
-            model_name=self.config.get('models.text.model_name', 'distilbert-base-uncased')
-        )
-        text_val_encoded, text_val_features = process_text_data(
-            val_df, 
-            model_name=self.config.get('models.text.model_name', 'distilbert-base-uncased')
-        )
+    def create_synthetic_data(self, num_samples: int = 1000) -> pd.DataFrame:
+        """Create synthetic data for training"""
+        data = []
 
-        # Prepare audio data
-        audio_train_mfcc, audio_train_mel, audio_train_prosodic = process_audio_data(train_df)
-        audio_val_mfcc, audio_val_mel, audio_val_prosodic = process_audio_data(val_df)
+        for i in range(num_samples):
+            # Generate synthetic text
+            if i % 3 == 0:  # Normal
+                text = "I'm feeling good today and everything is going well."
+                label = 0
+            elif i % 3 == 1:  # Depression
+                text = "I feel sad and empty inside. Nothing seems to matter anymore."
+                label = 1
+            else:  # Anxiety
+                text = "I'm constantly worried about everything and can't relax."
+                label = 2
 
-        # Prepare labels
-        train_labels = train_df['label'].values
-        val_labels = val_df['label'].values
+            # Generate synthetic audio path
+            audio_path = f"data/synthetic_audio/synthetic_audio_{i}.wav"
 
-        # Train text model
-        self.logger.info("Training text model...")
-        self._train_text_model(text_train_encoded, train_labels, text_val_encoded, val_labels)
+            data.append({
+                'text': text,
+                'audio_filepath': audio_path,
+                'label': label
+            })
 
-        # Train audio model
-        self.logger.info("Training audio model...")
-        self._train_audio_model(audio_train_mfcc, train_labels, audio_val_mfcc, val_labels)
+        return pd.DataFrame(data)
 
-        self.logger.info("Individual model training completed")
+    def train_text_model(self, train_loader: DataLoader, val_loader: DataLoader, epochs: int = 10):
+        """Train the text model"""
+        logger.info("Training text model...")
 
-    def _train_text_model(self, train_encoded: Dict, train_labels: np.ndarray, 
-                         val_encoded: Dict, val_labels: np.ndarray):
-        """Train text model."""
-        # Setup training
-        optimizer = optim.AdamW(
-            self.text_model.parameters(),
-            lr=self.config.get('models.text.learning_rate', 2e-5)
-        )
-        criterion = nn.CrossEntropyLoss()
-        early_stopping = EarlyStopping(
-            patience=self.config.get('training.early_stopping.patience', 5),
-            min_delta=self.config.get('training.early_stopping.min_delta', 0.001)
-        )
-
-        # Training loop
-        num_epochs = self.config.get('models.text.num_epochs', 10)
-        batch_size = self.config.get('models.text.batch_size', 16)
-
-        for epoch in range(num_epochs):
-            # Training phase
+        for epoch in range(epochs):
             self.text_model.train()
-            total_loss = 0
-            correct = 0
-            total = 0
+            train_loss = 0.0
+            train_correct = 0
+            train_total = 0
 
-            # Simple batch processing (in practice, use DataLoader)
-            for i in range(0, len(train_labels), batch_size):
-                end_idx = min(i + batch_size, len(train_labels))
+            for batch in train_loader:
+                texts = batch['texts']
+                labels = batch['labels'].to(self.device)
 
-                # Get batch
-                batch_input_ids = train_encoded['input_ids'][i:end_idx].to(self.device)
-                batch_attention_mask = train_encoded['attention_mask'][i:end_idx].to(self.device)
-                batch_labels = torch.tensor(train_labels[i:end_idx], dtype=torch.long).to(self.device)
+                # Tokenize texts
+                encoded = self.text_preprocessor.preprocess_batch(texts)
+                input_ids = encoded['input_ids'].to(self.device)
+                attention_mask = encoded['attention_mask'].to(self.device)
 
                 # Forward pass
-                optimizer.zero_grad()
-                logits = self.text_model(batch_input_ids, batch_attention_mask)
-                loss = criterion(logits, batch_labels)
+                self.text_optimizer.zero_grad()
+                outputs = self.text_model(input_ids, attention_mask)
+                loss = self.criterion(outputs, labels)
 
                 # Backward pass
                 loss.backward()
-                optimizer.step()
+                self.text_optimizer.step()
 
                 # Statistics
-                total_loss += loss.item()
-                _, predicted = torch.max(logits, 1)
-                total += batch_labels.size(0)
-                correct += (predicted == batch_labels).sum().item()
+                train_loss += loss.item()
+                _, predicted = torch.max(outputs.data, 1)
+                train_total += labels.size(0)
+                train_correct += (predicted == labels).sum().item()
 
-            # Validation phase
-            self.text_model.eval()
-            val_loss = 0
-            val_correct = 0
-            val_total = 0
+            # Validation
+            val_acc = self.evaluate_model(self.text_model, val_loader, model_type='text')
 
-            with torch.no_grad():
-                for i in range(0, len(val_labels), batch_size):
-                    end_idx = min(i + batch_size, len(val_labels))
+            logger.info(f"Text Epoch {epoch+1}/{epochs}: "
+                       f"Train Loss: {train_loss/len(train_loader):.4f}, "
+                       f"Train Acc: {100*train_correct/train_total:.2f}%, "
+                       f"Val Acc: {val_acc:.2f}%")
 
-                    # Get batch
-                    batch_input_ids = val_encoded['input_ids'][i:end_idx].to(self.device)
-                    batch_attention_mask = val_encoded['attention_mask'][i:end_idx].to(self.device)
-                    batch_labels = torch.tensor(val_labels[i:end_idx], dtype=torch.long).to(self.device)
+    def train_audio_model(self, train_loader: DataLoader, val_loader: DataLoader, epochs: int = 10):
+        """Train the audio model"""
+        logger.info("Training audio model...")
 
-                    # Forward pass
-                    logits = self.text_model(batch_input_ids, batch_attention_mask)
-                    loss = criterion(logits, batch_labels)
-
-                    # Statistics
-                    val_loss += loss.item()
-                    _, predicted = torch.max(logits, 1)
-                    val_total += batch_labels.size(0)
-                    val_correct += (predicted == batch_labels).sum().item()
-
-            # Calculate metrics
-            train_acc = 100 * correct / total
-            val_acc = 100 * val_correct / val_total
-
-            self.logger.info(f"Text Model Epoch {epoch+1}/{num_epochs} - "
-                           f"Train Loss: {total_loss/len(train_labels)*batch_size:.4f}, "
-                           f"Train Acc: {train_acc:.2f}%, "
-                           f"Val Loss: {val_loss/len(val_labels)*batch_size:.4f}, "
-                           f"Val Acc: {val_acc:.2f}%")
-
-            # Early stopping
-            if early_stopping(val_loss, self.text_model):
-                self.logger.info("Early stopping triggered for text model")
-                break
-
-        # Save model
-        save_model(self.text_model, optimizer, epoch, val_loss, 
-                  os.path.join(self.config.get('data.models_path', 'data/models'), 'text_model.pth'))
-
-    def _train_audio_model(self, train_mfcc: np.ndarray, train_labels: np.ndarray,
-                          val_mfcc: np.ndarray, val_labels: np.ndarray):
-        """Train audio model."""
-        # Setup training
-        optimizer = optim.Adam(
-            self.audio_model.parameters(),
-            lr=self.config.get('models.audio.learning_rate', 1e-3)
-        )
-        criterion = nn.CrossEntropyLoss()
-        early_stopping = EarlyStopping(
-            patience=self.config.get('training.early_stopping.patience', 5),
-            min_delta=self.config.get('training.early_stopping.min_delta', 0.001)
-        )
-
-        # Convert to tensors
-        train_mfcc = torch.tensor(train_mfcc, dtype=torch.float32)
-        val_mfcc = torch.tensor(val_mfcc, dtype=torch.float32)
-
-        # Training loop
-        num_epochs = self.config.get('models.audio.num_epochs', 50)
-        batch_size = self.config.get('models.audio.batch_size', 32)
-
-        for epoch in range(num_epochs):
-            # Training phase
+        for epoch in range(epochs):
             self.audio_model.train()
-            total_loss = 0
-            correct = 0
-            total = 0
+            train_loss = 0.0
+            train_correct = 0
+            train_total = 0
 
-            for i in range(0, len(train_labels), batch_size):
-                end_idx = min(i + batch_size, len(train_labels))
-
-                # Get batch
-                batch_audio = train_mfcc[i:end_idx].to(self.device)
-                batch_labels = torch.tensor(train_labels[i:end_idx], dtype=torch.long).to(self.device)
+            for batch in train_loader:
+                mfcc = batch['mfcc'].to(self.device)
+                mel_spec = batch['mel_spec'].to(self.device)
+                prosodic = batch['prosodic'].to(self.device)
+                labels = batch['labels'].to(self.device)
 
                 # Forward pass
-                optimizer.zero_grad()
-                logits = self.audio_model(batch_audio)
-                loss = criterion(logits, batch_labels)
+                self.audio_optimizer.zero_grad()
+                outputs = self.audio_model(mfcc, mel_spec, prosodic)
+                loss = self.criterion(outputs, labels)
 
                 # Backward pass
                 loss.backward()
-                optimizer.step()
+                self.audio_optimizer.step()
 
                 # Statistics
-                total_loss += loss.item()
-                _, predicted = torch.max(logits, 1)
-                total += batch_labels.size(0)
-                correct += (predicted == batch_labels).sum().item()
+                train_loss += loss.item()
+                _, predicted = torch.max(outputs.data, 1)
+                train_total += labels.size(0)
+                train_correct += (predicted == labels).sum().item()
 
-            # Validation phase
-            self.audio_model.eval()
-            val_loss = 0
-            val_correct = 0
-            val_total = 0
+            # Validation
+            val_acc = self.evaluate_model(self.audio_model, val_loader, model_type='audio')
 
-            with torch.no_grad():
-                for i in range(0, len(val_labels), batch_size):
-                    end_idx = min(i + batch_size, len(val_labels))
+            logger.info(f"Audio Epoch {epoch+1}/{epochs}: "
+                       f"Train Loss: {train_loss/len(train_loader):.4f}, "
+                       f"Train Acc: {100*train_correct/train_total:.2f}%, "
+                       f"Val Acc: {val_acc:.2f}%")
 
-                    # Get batch
-                    batch_audio = val_mfcc[i:end_idx].to(self.device)
-                    batch_labels = torch.tensor(val_labels[i:end_idx], dtype=torch.long).to(self.device)
+    def train_multimodal_model(self, train_loader: DataLoader, val_loader: DataLoader, epochs: int = 10):
+        """Train the multimodal model"""
+        logger.info("Training multimodal model...")
 
-                    # Forward pass
-                    logits = self.audio_model(batch_audio)
-                    loss = criterion(logits, batch_labels)
-
-                    # Statistics
-                    val_loss += loss.item()
-                    _, predicted = torch.max(logits, 1)
-                    val_total += batch_labels.size(0)
-                    val_correct += (predicted == batch_labels).sum().item()
-
-            # Calculate metrics
-            train_acc = 100 * correct / total
-            val_acc = 100 * val_correct / val_total
-
-            if epoch % 10 == 0:
-                self.logger.info(f"Audio Model Epoch {epoch+1}/{num_epochs} - "
-                               f"Train Loss: {total_loss/len(train_labels)*batch_size:.4f}, "
-                               f"Train Acc: {train_acc:.2f}%, "
-                               f"Val Loss: {val_loss/len(val_labels)*batch_size:.4f}, "
-                               f"Val Acc: {val_acc:.2f}%")
-
-            # Early stopping
-            if early_stopping(val_loss, self.audio_model):
-                self.logger.info("Early stopping triggered for audio model")
-                break
-
-        # Save model
-        save_model(self.audio_model, optimizer, epoch, val_loss,
-                  os.path.join(self.config.get('data.models_path', 'data/models'), 'audio_model.pth'))
-
-    def train_multimodal_model(self, train_df: pd.DataFrame, val_df: pd.DataFrame):
-        """
-        Train multimodal fusion model.
-
-        Args:
-            train_df: Training data
-            val_df: Validation data
-        """
-        self.logger.info("Training multimodal model...")
-
-        # Prepare data
-        text_train_encoded, _ = process_text_data(
-            train_df, 
-            model_name=self.config.get('models.text.model_name', 'distilbert-base-uncased')
-        )
-        text_val_encoded, _ = process_text_data(
-            val_df, 
-            model_name=self.config.get('models.text.model_name', 'distilbert-base-uncased')
-        )
-
-        audio_train_mfcc, _, _ = process_audio_data(train_df)
-        audio_val_mfcc, _, _ = process_audio_data(val_df)
-
-        # Convert to tensors
-        audio_train_mfcc = torch.tensor(audio_train_mfcc, dtype=torch.float32)
-        audio_val_mfcc = torch.tensor(audio_val_mfcc, dtype=torch.float32)
-
-        # Prepare labels
-        train_labels = train_df['label'].values
-        val_labels = val_df['label'].values
-
-        # Setup training
-        optimizer = optim.Adam(
-            self.multimodal_model.parameters(),
-            lr=self.config.get('models.multimodal.learning_rate', 1e-4)
-        )
-        criterion = nn.CrossEntropyLoss()
-        early_stopping = EarlyStopping(
-            patience=self.config.get('training.early_stopping.patience', 5),
-            min_delta=self.config.get('training.early_stopping.min_delta', 0.001)
-        )
-
-        # Training loop
-        num_epochs = self.config.get('models.multimodal.num_epochs', 30)
-        batch_size = self.config.get('models.multimodal.batch_size', 16)
-
-        for epoch in range(num_epochs):
-            # Training phase
+        for epoch in range(epochs):
             self.multimodal_model.train()
-            total_loss = 0
-            correct = 0
-            total = 0
+            train_loss = 0.0
+            train_correct = 0
+            train_total = 0
 
-            for i in range(0, len(train_labels), batch_size):
-                end_idx = min(i + batch_size, len(train_labels))
+            for batch in train_loader:
+                texts = batch['texts']
+                mfcc = batch['mfcc'].to(self.device)
+                mel_spec = batch['mel_spec'].to(self.device)
+                prosodic = batch['prosodic'].to(self.device)
+                labels = batch['labels'].to(self.device)
 
-                # Get batch
+                # Prepare text input
+                encoded = self.text_preprocessor.preprocess_batch(texts)
                 text_input = {
-                    'input_ids': text_train_encoded['input_ids'][i:end_idx].to(self.device),
-                    'attention_mask': text_train_encoded['attention_mask'][i:end_idx].to(self.device)
+                    'input_ids': encoded['input_ids'].to(self.device),
+                    'attention_mask': encoded['attention_mask'].to(self.device)
                 }
-                audio_input = audio_train_mfcc[i:end_idx].to(self.device)
-                batch_labels = torch.tensor(train_labels[i:end_idx], dtype=torch.long).to(self.device)
+
+                # Prepare audio input
+                audio_input = (mfcc, mel_spec, prosodic)
 
                 # Forward pass
-                optimizer.zero_grad()
-                logits = self.multimodal_model(text_input, audio_input)
-                loss = criterion(logits, batch_labels)
+                self.multimodal_optimizer.zero_grad()
+                outputs = self.multimodal_model(text_input, audio_input)
+                loss = self.criterion(outputs, labels)
 
                 # Backward pass
                 loss.backward()
-                optimizer.step()
+                self.multimodal_optimizer.step()
 
                 # Statistics
-                total_loss += loss.item()
-                _, predicted = torch.max(logits, 1)
-                total += batch_labels.size(0)
-                correct += (predicted == batch_labels).sum().item()
+                train_loss += loss.item()
+                _, predicted = torch.max(outputs.data, 1)
+                train_total += labels.size(0)
+                train_correct += (predicted == labels).sum().item()
 
-            # Validation phase
-            self.multimodal_model.eval()
-            val_loss = 0
-            val_correct = 0
-            val_total = 0
+            # Validation
+            val_acc = self.evaluate_model(self.multimodal_model, val_loader, model_type='multimodal')
 
-            with torch.no_grad():
-                for i in range(0, len(val_labels), batch_size):
-                    end_idx = min(i + batch_size, len(val_labels))
+            logger.info(f"Multimodal Epoch {epoch+1}/{epochs}: "
+                       f"Train Loss: {train_loss/len(train_loader):.4f}, "
+                       f"Train Acc: {100*train_correct/train_total:.2f}%, "
+                       f"Val Acc: {val_acc:.2f}%")
 
-                    # Get batch
-                    text_input = {
-                        'input_ids': text_val_encoded['input_ids'][i:end_idx].to(self.device),
-                        'attention_mask': text_val_encoded['attention_mask'][i:end_idx].to(self.device)
-                    }
-                    audio_input = audio_val_mfcc[i:end_idx].to(self.device)
-                    batch_labels = torch.tensor(val_labels[i:end_idx], dtype=torch.long).to(self.device)
-
-                    # Forward pass
-                    logits = self.multimodal_model(text_input, audio_input)
-                    loss = criterion(logits, batch_labels)
-
-                    # Statistics
-                    val_loss += loss.item()
-                    _, predicted = torch.max(logits, 1)
-                    val_total += batch_labels.size(0)
-                    val_correct += (predicted == batch_labels).sum().item()
-
-            # Calculate metrics
-            train_acc = 100 * correct / total
-            val_acc = 100 * val_correct / val_total
-
-            self.logger.info(f"Multimodal Model Epoch {epoch+1}/{num_epochs} - "
-                           f"Train Loss: {total_loss/len(train_labels)*batch_size:.4f}, "
-                           f"Train Acc: {train_acc:.2f}%, "
-                           f"Val Loss: {val_loss/len(val_labels)*batch_size:.4f}, "
-                           f"Val Acc: {val_acc:.2f}%")
-
-            # Store history
-            self.history['train_loss'].append(total_loss/len(train_labels)*batch_size)
-            self.history['train_acc'].append(train_acc)
-            self.history['val_loss'].append(val_loss/len(val_labels)*batch_size)
-            self.history['val_acc'].append(val_acc)
-
-            # Early stopping
-            if early_stopping(val_loss, self.multimodal_model):
-                self.logger.info("Early stopping triggered for multimodal model")
-                break
-
-        # Save model
-        save_model(self.multimodal_model, optimizer, epoch, val_loss,
-                  os.path.join(self.config.get('data.models_path', 'data/models'), 'multimodal_model.pth'))
-
-    def evaluate_model(self, test_df: pd.DataFrame):
-        """
-        Evaluate the multimodal model.
-
-        Args:
-            test_df: Test data
-        """
-        self.logger.info("Evaluating multimodal model...")
-
-        # Prepare test data
-        text_test_encoded, _ = process_text_data(
-            test_df, 
-            model_name=self.config.get('models.text.model_name', 'distilbert-base-uncased')
-        )
-        audio_test_mfcc, _, _ = process_audio_data(test_df)
-
-        # Convert to tensors
-        audio_test_mfcc = torch.tensor(audio_test_mfcc, dtype=torch.float32)
-        test_labels = test_df['label'].values
-
-        # Evaluation
-        self.multimodal_model.eval()
-        predictions = []
-        probabilities = []
-
-        batch_size = self.config.get('models.multimodal.batch_size', 16)
+    def evaluate_model(self, model, data_loader: DataLoader, model_type: str = 'multimodal') -> float:
+        """Evaluate model performance"""
+        model.eval()
+        correct = 0
+        total = 0
 
         with torch.no_grad():
-            for i in range(0, len(test_labels), batch_size):
-                end_idx = min(i + batch_size, len(test_labels))
+            for batch in data_loader:
+                labels = batch['labels'].to(self.device)
 
-                # Get batch
-                text_input = {
-                    'input_ids': text_test_encoded['input_ids'][i:end_idx].to(self.device),
-                    'attention_mask': text_test_encoded['attention_mask'][i:end_idx].to(self.device)
-                }
-                audio_input = audio_test_mfcc[i:end_idx].to(self.device)
+                if model_type == 'text':
+                    texts = batch['texts']
+                    encoded = self.text_preprocessor.preprocess_batch(texts)
+                    input_ids = encoded['input_ids'].to(self.device)
+                    attention_mask = encoded['attention_mask'].to(self.device)
+                    outputs = model(input_ids, attention_mask)
 
-                # Forward pass
-                logits = self.multimodal_model(text_input, audio_input)
-                probs = F.softmax(logits, dim=1)
+                elif model_type == 'audio':
+                    mfcc = batch['mfcc'].to(self.device)
+                    mel_spec = batch['mel_spec'].to(self.device)
+                    prosodic = batch['prosodic'].to(self.device)
+                    outputs = model(mfcc, mel_spec, prosodic)
 
-                # Store predictions
-                _, predicted = torch.max(logits, 1)
-                predictions.extend(predicted.cpu().numpy())
-                probabilities.extend(probs.cpu().numpy())
+                else:  # multimodal
+                    texts = batch['texts']
+                    mfcc = batch['mfcc'].to(self.device)
+                    mel_spec = batch['mel_spec'].to(self.device)
+                    prosodic = batch['prosodic'].to(self.device)
 
-        # Calculate metrics
-        predictions = np.array(predictions)
-        probabilities = np.array(probabilities)
+                    encoded = self.text_preprocessor.preprocess_batch(texts)
+                    text_input = {
+                        'input_ids': encoded['input_ids'].to(self.device),
+                        'attention_mask': encoded['attention_mask'].to(self.device)
+                    }
+                    audio_input = (mfcc, mel_spec, prosodic)
 
-        metrics = calculate_metrics(test_labels, predictions, probabilities)
+                    outputs = model(text_input, audio_input)
 
-        self.logger.info("Test Results:")
-        for metric, value in metrics.items():
-            self.logger.info(f"{metric}: {value:.4f}")
+                _, predicted = torch.max(outputs.data, 1)
+                total += labels.size(0)
+                correct += (predicted == labels).sum().item()
 
-        # Classification report
-        class_names = ['Normal', 'Depression', 'Anxiety']
-        report = classification_report(test_labels, predictions, target_names=class_names)
-        self.logger.info(f"Classification Report:\n{report}")
+        return 100 * correct / total
 
-        # Confusion matrix
-        cm = confusion_matrix(test_labels, predictions)
-        plt.figure(figsize=(8, 6))
-        sns.heatmap(cm, annot=True, fmt='d', cmap='Blues', xticklabels=class_names, yticklabels=class_names)
-        plt.title('Confusion Matrix')
-        plt.xlabel('Predicted')
-        plt.ylabel('Actual')
-        plt.savefig(os.path.join(self.config.get('data.models_path', 'data/models'), 'confusion_matrix.png'))
-        plt.show()
+    def save_models(self, model_dir: str = 'models'):
+        """Save trained models"""
+        os.makedirs(model_dir, exist_ok=True)
 
-        return metrics
+        # Save text model
+        torch.save({
+            'model_state_dict': self.text_model.state_dict(),
+            'optimizer_state_dict': self.text_optimizer.state_dict(),
+        }, os.path.join(model_dir, 'text_model.pth'))
+
+        # Save audio model
+        torch.save({
+            'model_state_dict': self.audio_model.state_dict(),
+            'optimizer_state_dict': self.audio_optimizer.state_dict(),
+        }, os.path.join(model_dir, 'audio_model.pth'))
+
+        # Save multimodal model
+        torch.save({
+            'model_state_dict': self.multimodal_model.state_dict(),
+            'optimizer_state_dict': self.multimodal_optimizer.state_dict(),
+        }, os.path.join(model_dir, 'multimodal_model.pth'))
+
+        logger.info(f"Models saved to {model_dir}")
 
     def run_full_training(self):
-        """Run complete training pipeline."""
-        self.logger.info("Starting full training pipeline...")
+        """Run complete training pipeline"""
+        logger.info("Starting full training pipeline...")
 
-        # Load data
-        train_df, val_df, test_df = self.load_data()
+        # Create synthetic data
+        logger.info("Creating synthetic data...")
+        df = self.create_synthetic_data(num_samples=1000)
 
-        # Create models
-        self.create_models()
+        # Save synthetic data
+        os.makedirs('data', exist_ok=True)
+        df.to_csv('data/synthetic_data.csv', index=False)
+
+        # Split data
+        train_df, val_df = train_test_split(df, test_size=0.2, random_state=42, stratify=df['label'])
+
+        # Create datasets
+        train_dataset = MultimodalDataset(train_df, self.text_preprocessor, self.audio_preprocessor)
+        val_dataset = MultimodalDataset(val_df, self.text_preprocessor, self.audio_preprocessor)
+
+        # Create data loaders
+        train_loader = DataLoader(
+            train_dataset, 
+            batch_size=self.config.get('batch_size', 16),
+            shuffle=True,
+            collate_fn=collate_fn
+        )
+        val_loader = DataLoader(
+            val_dataset, 
+            batch_size=self.config.get('batch_size', 16),
+            shuffle=False,
+            collate_fn=collate_fn
+        )
 
         # Train individual models
-        self.train_individual_models(train_df, val_df)
+        epochs = self.config.get('epochs', 10)
 
-        # Train multimodal model
-        self.train_multimodal_model(train_df, val_df)
+        self.train_text_model(train_loader, val_loader, epochs)
+        self.train_audio_model(train_loader, val_loader, epochs)
+        self.train_multimodal_model(train_loader, val_loader, epochs)
 
-        # Evaluate model
-        metrics = self.evaluate_model(test_df)
+        # Save models
+        self.save_models()
 
-        # Plot training history
-        plot_training_history(self.history, 
-                            save_path=os.path.join(self.config.get('data.models_path', 'data/models'), 'training_history.png'))
-
-        self.logger.info("Full training pipeline completed!")
-
-        return metrics
+        logger.info("Training completed successfully!")
 
 def main():
-    """Main function."""
-    parser = argparse.ArgumentParser(description='Train multimodal mental health detection model')
-    parser.add_argument('--config', type=str, default='config.yaml', help='Path to configuration file')
-    parser.add_argument('--mode', type=str, default='full', choices=['text', 'audio', 'multimodal', 'full'],
-                       help='Training mode')
+    """Main training function"""
+    config = {
+        'text_model': 'distilbert-base-uncased',
+        'sample_rate': 16000,
+        'frame_duration': 30,
+        'fusion_type': 'late',
+        'learning_rate': 1e-4,
+        'batch_size': 16,
+        'epochs': 10
+    }
 
-    args = parser.parse_args()
-
-    # Create trainer
-    trainer = MultimodalTrainer(args.config)
-
-    if args.mode == 'full':
-        trainer.run_full_training()
-    else:
-        # Individual model training (implementation similar to above)
-        pass
+    trainer = MentalHealthTrainer(config)
+    trainer.run_full_training()
 
 if __name__ == "__main__":
     main()

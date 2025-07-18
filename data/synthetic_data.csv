@@ -1,0 +1,1001 @@
+text,audio_filepath,label
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_0.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_1.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_2.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_3.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_4.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_5.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_6.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_7.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_8.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_9.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_10.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_11.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_12.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_13.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_14.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_15.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_16.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_17.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_18.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_19.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_20.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_21.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_22.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_23.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_24.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_25.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_26.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_27.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_28.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_29.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_30.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_31.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_32.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_33.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_34.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_35.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_36.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_37.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_38.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_39.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_40.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_41.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_42.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_43.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_44.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_45.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_46.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_47.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_48.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_49.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_50.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_51.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_52.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_53.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_54.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_55.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_56.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_57.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_58.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_59.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_60.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_61.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_62.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_63.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_64.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_65.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_66.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_67.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_68.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_69.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_70.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_71.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_72.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_73.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_74.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_75.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_76.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_77.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_78.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_79.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_80.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_81.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_82.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_83.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_84.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_85.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_86.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_87.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_88.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_89.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_90.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_91.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_92.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_93.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_94.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_95.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_96.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_97.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_98.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_99.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_100.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_101.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_102.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_103.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_104.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_105.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_106.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_107.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_108.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_109.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_110.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_111.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_112.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_113.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_114.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_115.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_116.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_117.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_118.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_119.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_120.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_121.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_122.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_123.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_124.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_125.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_126.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_127.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_128.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_129.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_130.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_131.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_132.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_133.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_134.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_135.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_136.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_137.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_138.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_139.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_140.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_141.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_142.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_143.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_144.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_145.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_146.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_147.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_148.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_149.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_150.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_151.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_152.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_153.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_154.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_155.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_156.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_157.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_158.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_159.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_160.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_161.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_162.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_163.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_164.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_165.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_166.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_167.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_168.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_169.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_170.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_171.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_172.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_173.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_174.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_175.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_176.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_177.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_178.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_179.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_180.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_181.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_182.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_183.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_184.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_185.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_186.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_187.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_188.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_189.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_190.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_191.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_192.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_193.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_194.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_195.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_196.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_197.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_198.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_199.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_200.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_201.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_202.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_203.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_204.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_205.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_206.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_207.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_208.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_209.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_210.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_211.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_212.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_213.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_214.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_215.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_216.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_217.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_218.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_219.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_220.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_221.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_222.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_223.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_224.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_225.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_226.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_227.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_228.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_229.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_230.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_231.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_232.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_233.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_234.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_235.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_236.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_237.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_238.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_239.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_240.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_241.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_242.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_243.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_244.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_245.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_246.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_247.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_248.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_249.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_250.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_251.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_252.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_253.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_254.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_255.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_256.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_257.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_258.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_259.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_260.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_261.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_262.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_263.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_264.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_265.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_266.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_267.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_268.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_269.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_270.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_271.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_272.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_273.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_274.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_275.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_276.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_277.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_278.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_279.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_280.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_281.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_282.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_283.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_284.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_285.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_286.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_287.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_288.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_289.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_290.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_291.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_292.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_293.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_294.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_295.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_296.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_297.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_298.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_299.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_300.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_301.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_302.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_303.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_304.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_305.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_306.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_307.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_308.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_309.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_310.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_311.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_312.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_313.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_314.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_315.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_316.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_317.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_318.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_319.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_320.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_321.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_322.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_323.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_324.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_325.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_326.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_327.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_328.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_329.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_330.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_331.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_332.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_333.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_334.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_335.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_336.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_337.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_338.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_339.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_340.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_341.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_342.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_343.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_344.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_345.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_346.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_347.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_348.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_349.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_350.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_351.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_352.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_353.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_354.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_355.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_356.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_357.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_358.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_359.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_360.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_361.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_362.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_363.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_364.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_365.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_366.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_367.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_368.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_369.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_370.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_371.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_372.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_373.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_374.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_375.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_376.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_377.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_378.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_379.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_380.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_381.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_382.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_383.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_384.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_385.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_386.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_387.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_388.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_389.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_390.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_391.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_392.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_393.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_394.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_395.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_396.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_397.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_398.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_399.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_400.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_401.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_402.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_403.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_404.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_405.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_406.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_407.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_408.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_409.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_410.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_411.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_412.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_413.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_414.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_415.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_416.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_417.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_418.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_419.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_420.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_421.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_422.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_423.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_424.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_425.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_426.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_427.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_428.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_429.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_430.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_431.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_432.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_433.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_434.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_435.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_436.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_437.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_438.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_439.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_440.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_441.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_442.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_443.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_444.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_445.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_446.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_447.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_448.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_449.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_450.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_451.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_452.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_453.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_454.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_455.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_456.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_457.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_458.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_459.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_460.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_461.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_462.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_463.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_464.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_465.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_466.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_467.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_468.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_469.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_470.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_471.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_472.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_473.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_474.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_475.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_476.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_477.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_478.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_479.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_480.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_481.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_482.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_483.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_484.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_485.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_486.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_487.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_488.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_489.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_490.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_491.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_492.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_493.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_494.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_495.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_496.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_497.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_498.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_499.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_500.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_501.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_502.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_503.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_504.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_505.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_506.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_507.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_508.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_509.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_510.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_511.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_512.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_513.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_514.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_515.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_516.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_517.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_518.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_519.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_520.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_521.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_522.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_523.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_524.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_525.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_526.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_527.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_528.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_529.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_530.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_531.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_532.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_533.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_534.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_535.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_536.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_537.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_538.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_539.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_540.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_541.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_542.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_543.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_544.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_545.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_546.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_547.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_548.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_549.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_550.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_551.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_552.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_553.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_554.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_555.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_556.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_557.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_558.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_559.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_560.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_561.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_562.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_563.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_564.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_565.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_566.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_567.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_568.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_569.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_570.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_571.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_572.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_573.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_574.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_575.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_576.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_577.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_578.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_579.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_580.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_581.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_582.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_583.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_584.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_585.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_586.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_587.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_588.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_589.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_590.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_591.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_592.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_593.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_594.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_595.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_596.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_597.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_598.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_599.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_600.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_601.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_602.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_603.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_604.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_605.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_606.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_607.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_608.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_609.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_610.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_611.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_612.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_613.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_614.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_615.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_616.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_617.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_618.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_619.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_620.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_621.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_622.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_623.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_624.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_625.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_626.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_627.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_628.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_629.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_630.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_631.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_632.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_633.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_634.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_635.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_636.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_637.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_638.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_639.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_640.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_641.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_642.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_643.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_644.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_645.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_646.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_647.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_648.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_649.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_650.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_651.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_652.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_653.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_654.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_655.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_656.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_657.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_658.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_659.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_660.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_661.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_662.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_663.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_664.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_665.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_666.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_667.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_668.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_669.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_670.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_671.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_672.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_673.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_674.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_675.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_676.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_677.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_678.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_679.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_680.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_681.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_682.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_683.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_684.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_685.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_686.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_687.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_688.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_689.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_690.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_691.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_692.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_693.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_694.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_695.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_696.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_697.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_698.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_699.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_700.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_701.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_702.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_703.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_704.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_705.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_706.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_707.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_708.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_709.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_710.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_711.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_712.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_713.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_714.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_715.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_716.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_717.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_718.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_719.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_720.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_721.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_722.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_723.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_724.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_725.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_726.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_727.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_728.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_729.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_730.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_731.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_732.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_733.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_734.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_735.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_736.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_737.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_738.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_739.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_740.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_741.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_742.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_743.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_744.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_745.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_746.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_747.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_748.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_749.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_750.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_751.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_752.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_753.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_754.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_755.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_756.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_757.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_758.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_759.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_760.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_761.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_762.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_763.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_764.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_765.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_766.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_767.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_768.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_769.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_770.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_771.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_772.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_773.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_774.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_775.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_776.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_777.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_778.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_779.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_780.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_781.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_782.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_783.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_784.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_785.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_786.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_787.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_788.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_789.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_790.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_791.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_792.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_793.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_794.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_795.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_796.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_797.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_798.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_799.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_800.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_801.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_802.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_803.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_804.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_805.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_806.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_807.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_808.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_809.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_810.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_811.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_812.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_813.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_814.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_815.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_816.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_817.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_818.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_819.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_820.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_821.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_822.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_823.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_824.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_825.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_826.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_827.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_828.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_829.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_830.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_831.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_832.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_833.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_834.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_835.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_836.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_837.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_838.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_839.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_840.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_841.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_842.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_843.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_844.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_845.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_846.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_847.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_848.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_849.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_850.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_851.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_852.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_853.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_854.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_855.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_856.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_857.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_858.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_859.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_860.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_861.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_862.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_863.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_864.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_865.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_866.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_867.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_868.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_869.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_870.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_871.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_872.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_873.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_874.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_875.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_876.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_877.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_878.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_879.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_880.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_881.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_882.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_883.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_884.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_885.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_886.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_887.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_888.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_889.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_890.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_891.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_892.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_893.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_894.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_895.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_896.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_897.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_898.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_899.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_900.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_901.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_902.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_903.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_904.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_905.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_906.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_907.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_908.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_909.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_910.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_911.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_912.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_913.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_914.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_915.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_916.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_917.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_918.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_919.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_920.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_921.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_922.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_923.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_924.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_925.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_926.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_927.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_928.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_929.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_930.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_931.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_932.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_933.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_934.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_935.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_936.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_937.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_938.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_939.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_940.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_941.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_942.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_943.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_944.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_945.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_946.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_947.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_948.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_949.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_950.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_951.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_952.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_953.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_954.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_955.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_956.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_957.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_958.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_959.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_960.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_961.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_962.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_963.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_964.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_965.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_966.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_967.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_968.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_969.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_970.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_971.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_972.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_973.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_974.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_975.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_976.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_977.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_978.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_979.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_980.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_981.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_982.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_983.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_984.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_985.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_986.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_987.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_988.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_989.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_990.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_991.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_992.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_993.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_994.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_995.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_996.wav,0
+I feel sad and empty inside. Nothing seems to matter anymore.,data/synthetic_audio/synthetic_audio_997.wav,1
+I'm constantly worried about everything and can't relax.,data/synthetic_audio/synthetic_audio_998.wav,2
+I'm feeling good today and everything is going well.,data/synthetic_audio/synthetic_audio_999.wav,0
