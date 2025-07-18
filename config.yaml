@@ -1,0 +1,102 @@
+# Configuration file for the multimodal mental health detection system
+
+# Data configuration
+data:
+  raw_data_path: "data/raw/"
+  processed_data_path: "data/processed/"
+  models_path: "data/models/"
+  
+  # Dataset specific configurations
+  daic_woz:
+    audio_path: "data/raw/daic_woz/audio/"
+    text_path: "data/raw/daic_woz/text/"
+    labels_path: "data/raw/daic_woz/labels.csv"
+    
+  # Sample rates and audio parameters
+  audio:
+    sample_rate: 16000
+    max_length: 30  # seconds
+    hop_length: 512
+    n_fft: 2048
+    n_mels: 128
+    n_mfcc: 13
+
+# Model configuration
+models:
+  text:
+    model_name: "distilbert-base-uncased"
+    max_length: 512
+    batch_size: 16
+    learning_rate: 2e-5
+    num_epochs: 10
+    dropout_rate: 0.1
+    
+  audio:
+    model_type: "cnn_lstm"
+    cnn_filters: [64, 128, 256]
+    cnn_kernel_size: 3
+    lstm_hidden_size: 128
+    lstm_layers: 2
+    dropout_rate: 0.3
+    batch_size: 32
+    learning_rate: 1e-3
+    num_epochs: 50
+    
+  multimodal:
+    fusion_type: "late"  # early, late, or hybrid
+    hidden_size: 256
+    dropout_rate: 0.2
+    batch_size: 16
+    learning_rate: 1e-4
+    num_epochs: 30
+
+# Training configuration
+training:
+  device: "cuda"  # cuda or cpu
+  seed: 42
+  validation_split: 0.2
+  test_split: 0.1
+  stratify: true
+  
+  # Early stopping
+  early_stopping:
+    patience: 5
+    min_delta: 0.001
+    
+  # Scheduler
+  scheduler:
+    type: "cosine"  # cosine, step, or plateau
+    warmup_steps: 1000
+
+# Evaluation configuration
+evaluation:
+  metrics: ["accuracy", "precision", "recall", "f1", "auc"]
+  threshold: 0.5
+  
+# Deployment configuration
+deployment:
+  streamlit:
+    title: "Mental Health Detection System"
+    port: 8501
+    host: "localhost"
+    
+  api:
+    host: "0.0.0.0"
+    port: 8000
+    debug: false
+
+# Logging configuration
+logging:
+  level: "INFO"
+  format: "%(asctime)s - %(name)s - %(levelname)s - %(message)s"
+  file: "logs/training.log"
+
+# Explainability configuration
+explainability:
+  shap:
+    max_samples: 100
+    feature_names: true
+    
+  lime:
+    num_features: 10
+    num_samples: 1000

@@ -1,0 +1,82 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.so
+*.ipynb_checkpoints
+
+# Virtual environment
+venv/
+env/
+ENV/
+.venv/
+
+# IDEs and editors
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# OS-specific
+.DS_Store
+Thumbs.db
+ehthumbs.db
+desktop.ini
+
+# Logs
+*.log
+
+# Jupyter Notebook checkpoint files
+.ipynb_checkpoints/
+
+# Data
+data/raw/
+data/processed/
+data/models/*.pth
+*.wav
+*.mp3
+
+# Streamlit
+.streamlit/config.toml
+.streamlit/secrets.toml
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.swp
+*.lock
+*.npy
+*.npz
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+*.manifest
+
+# Testing
+htmlcov/
+coverage.xml
+.tox/
+.pytest_cache/
+.noseids
+
+# SHAP & matplotlib
+*.png
+*.pdf
+
+# Cache and metadata
+.cache/
+__pycache__/
+pip-wheel-metadata/
+*.egg
+
+# Environment files
+.env
+.env.*
+
+# Windows
+*.bat
+*.exe
