@@ -38,7 +38,7 @@ captum>=0.5.0
 # Audio processing
 pyaudio>=0.2.11
 pydub>=0.25.0
-webrtcvad>=2.0.10
+webrtcvad-wheels==2.0.14
 
 # Utilities
 tqdm>=4.64.0
@@ -56,6 +56,7 @@ flake8>=4.0.0
 mypy>=0.971
 jupyter>=1.0.0
 ipywidgets>=7.7.0
+
 
 # Optional GPU support
 # torch-audio-cuda>=0.9.0  # Uncomment if using CUDA
