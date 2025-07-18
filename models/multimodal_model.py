@@ -9,8 +9,8 @@ import torch.nn.functional as F
 from typing import Dict, List, Tuple, Optional
 import logging
 
-from text_model import TextModel
-from audio_model import AudioModel
+from .text_model import TextModel
+from .audio_model import AudioModel
 
 class EarlyFusionModel(nn.Module):
     """Early fusion model that combines features at the feature level."""
